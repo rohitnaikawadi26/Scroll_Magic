@@ -31,7 +31,7 @@ This project is an interactive scrolling website designed to enhance user engage
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/rohitnaikawadi26/Scroll_Magic.git
 
 2.Navigate to the project directory:
   cd Scroll Magic
