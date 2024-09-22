@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Based Website</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+    <style>
+
+        html.lenis, html.lenis body {
+        height: auto;
+        }
+
+        .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+        overflow: hidden;
+        }
+
+        .lenis.lenis-smooth iframe {
+        pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Loader screen -->
+    <div id="loader" class="fixed top-0 left-0 z-[10] w-full h-screen bg-zinc-900 flex flex-col justify-center items-center gap-1 text-white overflow-hidden p-8">
+        <h2 id="loader-text" class="text-5xl font-light uppercase overflow-hidden">Loading &nbsp; &nbsp; Experience...</h2>
+        <p id="loader-para" class="text-zinc-500 overflow-hidden">This may take a minute or two. Depending on your internet speed.</p>
+    </div>
+
+    <div id="content" class="w-full bg-zinc-900">
+        <div class="parent relative h-[2000vh] w-full bg-zinc-900 text-white">
+            <div class="fixed w-full h-full">
+                <canvas class="w-full h-screen" id="main-canvas"></canvas>
+            </div>
+            <!-- ========= Scroll based text stuff ========= -->
+             <!-- Text 1 -->
+             <div class="animate1 fixed bottom-6 left-6 opacity-1">
+                <h2 class="text-4xl font-extralight">&copy; 2024 DOZE STD</h2>
+                <h2 class="text-4xl flex justify-center items-center mt-1 font-medium">SHAPING BRANDS <span class="mx-3 scale-150"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></span> CRAFTING MOTION</h2>
+             </div>
+             <!-- Text 2 -->
+             <div class="animate2 fixed bottom-6 right-6 flex gap-6 w-1/2 opacity-0">
+                <h2 class="text-6xl font-medium w-[60%] tracking-tighter text-right">TRANSFORMING VISIONS</h2>
+                <h2 class="text-xl mt-1 w-[40%] text-center">Building identity and inspiring action. Sculpting digital experience resonate.</h2>
+             </div>
+             <!-- Text 3 -->
+             <div class="animate3 fixed text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0">
+                <h2 class="text-6xl font-extralight">ELEVATING AESTHETICS</h2>
+                <h2 class="text-xl mt-1 ">Crafting solutions and exploring new horizons. Evolving narratives and elevating aesthetics in every project.</h2>
+             </div>
+             <!-- Text 4 (PANEL) -->
+             <div class="panel fixed top-0 right-0 h-screen w-[33%] bg-white px-10 py-12 flex flex-col justify-between translate-x-full">
+                <div class="text-black">
+                    <h2 class="text-xl text-zinc-500 mb-8">&copy; 2024 Doze.Std</h2>
+                    <p class="text-lg font-medium mb-5">Sculpting Digital Transforming visions into digital realities. Weaving stories that captivate and innovate. Exploring new possibilities with a focus on narrative evolution. Crafting solutions that engage and elevate.</p>
+                    <button class="flex justify-center items-center font-light text-zinc-500 border border-zinc-500 text-xl px-3 py-2">Get Reviews <span class="scale-75"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></span></button>
+                </div>
+                <div class="text-black flex flex-col gap-5">
+                    <h2 class="text-lg font-medium">Innovating Design</h2>
+                    <p class="font-medium">Connecting ideas to foster creativity. Design experiences that resonate. Feel free to mix and match your taste with website's design needs!</p>
+                    <button class="font-light text-sm text-white bg-black px-5 py-3 w-fit">Experience</button>
+                </div>
+             </div>
+             <!-- Text 5 -->
+             <div class="panelism fixed text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0">
+                <h2 class="text-6xl">&copy;rohitnaikawadi26<span class="inline-block border-b-[5px] w-[3vw] mx-1"></span></h2>
+             </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
+    <script src="./script.js"></script>
+</body>
+</html>
